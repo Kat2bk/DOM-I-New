@@ -98,3 +98,42 @@ let secondTitleParagraph = document.querySelectorAll(
   ".main-content .top-content .text-content p"
 )[1];
 secondTitleParagraph.textContent = siteContent["main-content"]["about-content"];
+
+// bottom content
+// first tier
+
+let bottomFirst = document.querySelectorAll(
+  ".main-content .bottom-content .text-content h4"
+)[0];
+
+bottomFirst.textContent = siteContent["main-content"]["services-h4"];
+
+let bottomFirstParagraph = document.querySelectorAll(
+  ".main-content .bottom-content .text-content p"
+)[0];
+bottomFirstParagraph.textContent =
+  siteContent["main-content"]["services-content"];
+
+// second tier
+
+let bottomSecond = document.querySelectorAll(
+  ".main-content .bottom-content .text-content h4"
+)[1];
+bottomSecond.textContent = siteContent["main-content"]["product-h4"];
+let bottomSecondParagraph = document.querySelectorAll(
+  ".main-content .bottom-content .text-content p"
+)[1];
+bottomSecondParagraph.textContent =
+  siteContent["main-content"]["product-content"];
+
+// third tier
+
+let bottomThird = document.querySelectorAll(
+  ".main-content .bottom-content .text-content h4"
+)[2];
+bottomThird.textContent = siteContent["main-content"]["vision-h4"];
+let bottomThirdParagraph = document.querySelectorAll(
+  ".main-content .bottom-content .text-content p"
+)[2];
+bottomThirdParagraph.textContent =
+  siteContent["main-content"]["vision-content"];
