@@ -52,3 +52,10 @@ let headerImage = document.getElementById("cta-img");
 headerImage.setAttribute("src", siteContent["cta"]["img-src"]);
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// navigation
+
+let navItems = document.getElementsByTagName("a");
+Array.from(navItems).forEach((item, index) => {
+  item.textContent = siteContent["nav"][`nav-item-${(index += 1)}`];
+});
