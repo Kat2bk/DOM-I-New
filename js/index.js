@@ -137,3 +137,17 @@ let bottomThirdParagraph = document.querySelectorAll(
 )[2];
 bottomThirdParagraph.textContent =
   siteContent["main-content"]["vision-content"];
+
+// contact
+
+let contactTitle = document.querySelectorAll(".contact h4")[0];
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+
+let contactPara1 = document.querySelectorAll(".contact p")[0];
+contactPara1.textContent = siteContent["contact"]["address"];
+
+let contactPara2 = document.querySelectorAll(".contact p")[1];
+contactPara2.textContent = siteContent["contact"]["phone"];
+
+let contactPara3 = document.querySelectorAll(".contact p")[2];
+contactPara3.textContent = siteContent["contact"]["email"];
