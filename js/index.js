@@ -60,7 +60,8 @@ Array.from(navItems).forEach((item, index) => {
   item.textContent = siteContent["nav"][`nav-item-${(index += 1)}`];
 });
 
-// main title and button
+// main title and button / text is different between querySelectorAll and getElementsByClassName and Query Selector
+//
 
 // let title = document.getElementsByClassName("cta-text")[0];
 // title.textContent = siteContent["cta"]["h1"];
@@ -75,3 +76,25 @@ let titleButton = document.querySelectorAll(".cta-text button")[0];
 titleButton.textContent = siteContent["cta"]["button"];
 
 // main content
+
+// top content
+
+let topTitle = document.querySelectorAll(
+  ".main-content .top-content .text-content h4"
+)[0];
+topTitle.textContent = siteContent["main-content"]["features-h4"];
+let topTitleParagraph = document.querySelectorAll(
+  ".main-content .top-content .text-content p"
+)[0];
+topTitleParagraph.textContent = siteContent["main-content"]["features-content"];
+
+// second top content
+
+let secondTitle = document.querySelectorAll(
+  ".main-content .top-content .text-content h4"
+)[1];
+secondTitle.textContent = siteContent["main-content"]["about-h4"];
+let secondTitleParagraph = document.querySelectorAll(
+  ".main-content .top-content .text-content p"
+)[1];
+secondTitleParagraph.textContent = siteContent["main-content"]["about-content"];
