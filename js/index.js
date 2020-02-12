@@ -59,3 +59,19 @@ let navItems = document.getElementsByTagName("a");
 Array.from(navItems).forEach((item, index) => {
   item.textContent = siteContent["nav"][`nav-item-${(index += 1)}`];
 });
+
+// main title and button
+
+// let title = document.getElementsByClassName("cta-text")[0];
+// title.textContent = siteContent["cta"]["h1"];
+
+// let title = document.querySelector(".cta-text");
+// title.textContent = siteContent["cta"]["h1"];
+
+let title = document.querySelectorAll(".cta-text h1")[0];
+title.textContent = siteContent["cta"]["h1"];
+
+let titleButton = document.querySelectorAll(".cta-text button")[0];
+titleButton.textContent = siteContent["cta"]["button"];
+
+// main content
