@@ -151,3 +151,15 @@ contactPara2.textContent = siteContent["contact"]["phone"];
 
 let contactPara3 = document.querySelectorAll(".contact p")[2];
 contactPara3.textContent = siteContent["contact"]["email"];
+
+// footer
+
+let footerTitle = document.querySelectorAll("footer p")[0];
+footerTitle.textContent = siteContent["footer"]["copyright"];
+
+// change navigation items to green
+
+let greenNavigation = document.querySelectorAll("a");
+greenNavigation.forEach(items => {
+  items.style.color = "green";
+});
