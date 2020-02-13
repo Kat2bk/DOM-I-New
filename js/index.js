@@ -163,3 +163,17 @@ let greenNavigation = document.querySelectorAll("a");
 greenNavigation.forEach(items => {
   items.style.color = "green";
 });
+
+// create two new elements on nav bar / querySelectorAll doesn't work
+
+const newNavigation = document.createElement("a");
+newNavigation.textContent = "Hello";
+
+const newNavItem = document.querySelector("nav");
+newNavItem.appendChild(newNavigation);
+
+const newNavigationElement = document.createElement("a");
+newNavigationElement.textContent = "Coding";
+
+const newNavi = document.querySelector("nav");
+newNavi.prepend(newNavigationElement);
