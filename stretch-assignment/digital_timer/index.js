@@ -6,6 +6,7 @@ function Timer() {
   function running() {
     time += delta();
     var formatTime = timeform(time);
+    console.log(formatTime);
   }
   function delta() {
     var now = Date.now();
@@ -13,8 +14,20 @@ function Timer() {
     offset = now;
     return timePassed;
   }
-  function timeform(milliseconds) {
+  function timeform(timeSeconds) {
     var time = new Date(milliseconds);
+    var seconds = time.getSeconds().toString();
+    var milliseconds = time.getMilliseconds().toString();
+
+    if (seconds.length < 2) {
+      seconds = "0" + seconds;
+    }
+
+    while (milliseconds.length < 3) {
+      milliseconds = "0" + milliseconds;
+    }
+
+    return seconds + " : " + milliseconds;
   }
 
   this.isOn = false;
