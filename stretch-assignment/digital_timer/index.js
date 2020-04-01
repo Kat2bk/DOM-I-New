@@ -15,7 +15,7 @@ function Timer() {
     return timePassed;
   }
   function timeform(timeSeconds) {
-    var time = new Date(milliseconds);
+    var time = new Date(timeSeconds);
     var seconds = time.getSeconds().toString();
     var milliseconds = time.getMilliseconds().toString();
 
