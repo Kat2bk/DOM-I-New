@@ -1,4 +1,4 @@
-function Timer() {
+function Timer(element) {
   var time = 0;
   var interval;
   var offset;
@@ -6,7 +6,7 @@ function Timer() {
   function running() {
     time += delta();
     var formatTime = timeform(time);
-    console.log(formatTime);
+    element.textContent = formatTime;
   }
   function delta() {
     var now = Date.now();
@@ -55,8 +55,24 @@ function Timer() {
   //   }
 }
 
-var watch = new Timer();
+var watch = new Timer(stopwatch);
 
 // function stopTimer() {
 //   clearInterval(watch);
 // }
+
+// var secondTens = document.getElementById(secondTens);
+// var secondOnes = document.getElementById(secondOnes);
+// var Tens = secondTens + secondOnes;
+
+var stopwatch = document.querySelectorAll(".digits");
+
+var startButton = document.getElementById("start");
+
+startButton.addEventListener("click", function() {
+  if (watch.isOn) {
+    watch.stop();
+  } else {
+    watch.start();
+  }
+});
