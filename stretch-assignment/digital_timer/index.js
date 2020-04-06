@@ -65,7 +65,7 @@ var watch = new Timer(stopwatch);
 // var secondOnes = document.getElementById(secondOnes);
 // var Tens = secondTens + secondOnes;
 
-var stopwatch = document.querySelectorAll(".digits");
+var stopwatch = document.querySelector(".digits");
 
 var startButton = document.getElementById("start");
 
